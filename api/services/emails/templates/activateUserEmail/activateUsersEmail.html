@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="color-scheme" content="light dark">
+		<meta name="supported-color-schemes" content="light dark">
+		<title>Confirmación de la cuenta</title>
+
+		<!-------------------- ESTILOS --------------------->
+			<style type="text/css">
+				.email {
+            		background-color: #f9f9f9;
+            		height: 100%;
+					width: 100%;
+					max-width: 720px;
+					overflow: hidden;
+					box-sizing: border-box;
+				}
+
+				.email__header {
+					background-color: rgb(10, 10, 10);
+					text-align: center;
+					padding: 2rem;
+					height: 60px;
+					background-image: url("cid:headerbg");
+					background-size: cover;
+					background-repeat: no-repeat;
+					background-position: center;
+				}
+
+				.email__header img {
+					width: 70px;
+					height: 70px;
+				}
+
+				.email__body {
+					padding: 1rem;
+					background-color: #f9f9f9;
+				}
+
+				.email__body h1 {
+					text-align: center;
+					font-size: 20px;
+					margin-bottom: 1rem;
+					font-weight: 900;
+					color: #101010;
+				}
+				
+				p {
+					margin: 0;
+				}
+
+				.email__body p {
+					text-align: left;
+					display: block;
+					margin: .25rem;
+					font-size: 16px;
+                    width: 100%;
+					color: #101010;
+				}
+
+				.email__body p:first-child, .email__body p:nth-child(2) {
+					display: block;
+				}
+
+				.email__footer {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+                	padding-bottom: 3rem;
+					width: 100%;
+				}
+
+				.email__footer a {
+					padding: 0.5rem 1rem;
+					color: white;
+					background-color: #101010;
+					border-radius: 0.25rem;
+					text-decoration: none;
+					margin: 1rem auto;
+					font-weight: 600;
+					font-size: 16px;
+				}
+
+				.email__footer a:hover {
+					background-color: rgb(96, 202, 96);
+				}
+
+				@media (prefers-color-scheme: dark) {
+					.email__header {
+					background-image: url("cid:headerbg1")!important;
+					}
+				}
+			</style>
+		<!-------------------- FIN ESTILOS --------------------->
+		</head>
+		
+			<div class="email">
+				<div class="email__header">	
+					<!-- <img src="cid:logo" alt="Encabezado del email" /> -->
+				</div>
+	
+				<div class="email__body">
+					<h1>🎉BIENVENIDO!!🎉</h1>
+					<p>Gracias por unirte a mi familia de seguidores, ahora puedes seguir disfrutando de todo mi contenido en mi web: </p>
+				</div>
+	
+				<div class="email__footer">
+					<a href="{{{loginLink}}}">LOGIN</a>
+				</div>
+			</div>
+			
+	</body>
+</html>

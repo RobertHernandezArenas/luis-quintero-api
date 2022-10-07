@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="color-scheme" content="light dark">
+		<meta name="supported-color-schemes" content="light dark">
+		<title>Confirmación de la cuenta</title>
+		<!-------------------- ESTILOS --------------------->
+			<style type="text/css">
+				.email {
+            		background-color: #f9f9f9;
+            		height: 100%;
+					width: 100%;
+					max-width: 720px;
+					overflow: hidden;
+					box-sizing: border-box;
+				}
+
+				.email__header {
+					background-color: rgb(10, 10, 10);
+					text-align: center;
+					height: 120px;
+					overflow: hidden;
+				}
+
+				.email__header img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+
+				#email__body {
+					padding: 1rem 2rem;
+					background-color: #f9f9f9;
+				}
+
+				#email__body h1 {
+					text-align: center;
+					font-size: 20px;
+					margin-bottom: 1rem;
+					font-weight: 900;
+					color: #101010;
+				}
+				
+				p {
+					margin: 0;
+				}
+
+				#email__body p {
+					text-align: left;
+					display: block;
+					margin: .25rem;
+					font-size: 16px;
+                    width: 100%;
+					color: #101010;
+				}
+
+				.email__footer {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+                	padding-bottom: 3rem;
+					width: 100%;
+				}
+
+				.email__footer a {
+					padding: 1rem 2rem;
+					color: white;
+					background-color: #101010;
+					border-radius: 2rem;
+					text-decoration: none;
+					margin: 1rem auto;
+					font-weight: 700;
+					font-size: 16px;
+				}
+
+				.email__footer a:hover {
+					background-color: rgb(96, 202, 96);
+				}
+
+				@media (prefers-color-scheme: dark) {
+					p {
+						color: #101010;
+					}
+
+					#email__body {
+						background-color: #f9f9f9 !important;
+					}
+
+					h1, h2, h3 {
+						color: #101010;
+					}
+
+					
+				}
+			</style>
+		<!-------------------- FIN ESTILOS ----------------->
+		</head>
+		
+			<div class="email">
+				<div class="email__header">	
+					<img src="cid:headerbg" alt="Encabezado del email" />
+				</div>
+	
+				<div id="email__body" class="email__body">
+					<h1>HAZ RECIBIDO EL SIGUIENTE MENSAJE:</h1>
+					<h2>{{{subject}}}</h2>
+					<p>{{{message}}}</p>
+					<br>
+					<h3>Datos de contacto:</h3>
+					<p>{{email}}</p>
+				</div>
+	
+				<!-- <div class="email__footer">
+					<a href="{{{activationLink}}}">ACTIVAR CUENTA</a>
+				</div> -->
+			</div>
+
+	</body>
+</html>
