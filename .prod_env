@@ -1,0 +1,54 @@
+# API
+NODE_ENV=hola
+HOST=http://caremonda
+HOSTVPS=https://luisquintero.website
+FIRST_DEFAULT_PORT=3000
+SECOND_DEFAULT_PORT=3001
+BASE_API_URL=/api/v1
+USERS_ROUTE=users
+NEWSLETTERS_ROUTES=newsletters
+EMAILS_ROUTES=emails
+
+
+
+# Config MYSQL
+MYSQL_USER=root
+MYSQL_PORT=3306
+MYSQL_PASSWORD=robert
+MYSQL_DATABASE=football_player_db
+MYSQL_CONNECTION_LIMITS= 100
+# config que se encarga de guardar  fecha y hora segun tu zona local, +02:00 corresponde madrid, bruselas..etc verano
+# tambien puede recibir el valor Z || utc
+MYSQL_TIMEZONE=Z
+
+# Config Nodemailer
+ADMIN_EMAIL=luisquinterojr10@gmail.com
+POOL_NODEMAILER=true
+SERVICE_NODEMAILER=gmail
+PASS_GOOGLEAPP_NODEMAILER=wqooybgzgngbfvjf
+PASS_GOOGLEAPP_NODEMAILER1=fwjvmcymiczuikky
+HOST_NODEMAILER=smtp.gmail.com#smtp.hostinger.com
+PORT_NODEMAILER=465#587--2525
+SECURE_NODEMAILER=true
+
+# Paths
+UPLOADS_DIR=public/uploads/
+USERS_UPLOADS_DIR=/uploads/users
+AVATAR_DEFAULT=/uploads/avatar
+LOGO_IMAGE_PATH=public/uploads/logos/app/logo.png
+ERROR_PATH_LOGS=logs/errors
+# Links to app
+SIGNIN_LINK=\#
+
+# Utils for JWT
+SECRET_KEY= HelloWorld!!!*.-´`+`+`´´··
+EXPIRATION_TOKEN=20s
+
+# name routes API
+USER_ROUTES=user
+
+# Config GoogleApis
+CLIENT_ID=533520216013-182h23mmv14np8k767bdvamjumikt68o.apps.googleusercontent.com
+SECRET_CLIENT=YKRw3lv8_AlY6JrTQrY2NgxY
+REFRESH_TOKEN=1//04co04nc9RLY8CgYIARAAGAQSNwF-L9IrAWidNt1x78rF8Yh5rfV3BxstQXgjLyz3fKIsiYwH2d4gxnpHF_eDLehZ5CH_2A9ze30
+REDIRECT_URI=https://developers.google.com/oauthplayground

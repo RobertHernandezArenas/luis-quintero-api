@@ -56,22 +56,26 @@ const helpers = {
 			return error;
 		}
 	},
-	capitalize: string => {
-		// let splitString = string.toLowerCase().split(" ");
+	firstLetterUpper: str => {
+		str = str.split(" ");
+		let h = [];
 
-		// for (let i = 0; i < splitString.length; i++) {
-		// 	splitString[i] =
-		// 		splitString[i].charAt(0).toUpperCase() +
-		// 		splitString[i].substring(1);
-		// }
+		str.map((str, i) => {
+			if (i == 0) {
+				str = str.charAt(0).toUpperCase() + str.slice(1);
+			}
+			h.push(str);
+		});
+		return h.join().replaceAll(",", " ");
+	},
 
-		// return splitString.join(" ");
-
+	eachWordLetterUpper: str => {
 		str = str.split(" ").map(str => {
 			return str.charAt(0).toUpperCase() + str.slice(1);
 		});
 		return str.join().replaceAll(",", " ");
 	},
+
 	getPathFile: nameFile => {
 		let pathFile = path.join(__dirname, nameFile);
 		return pathFile;
@@ -123,7 +127,7 @@ const helpers = {
 		const pathImageDefault = path.join(
 			//__dirname,
 			//	config.api.host,
-			 config.pathFiles.avatar,
+			config.pathFiles.avatar,
 			`./${avatarImage}`,
 		);
 		//console.log("ESTE ES DEFAULT PATH IMAGE", pathImageDefault);
