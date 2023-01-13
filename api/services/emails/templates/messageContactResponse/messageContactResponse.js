@@ -16,7 +16,7 @@ const sendMsgContactResponse = ({ email }) => {
 	const htmlToSend = template(replacements);
 
 	return {
-		from: `Luis Quintero Web<${config.nodemailer.auth.user}>`,
+		from: `Luis Quintero Hernandez<${config.nodemailer.auth.user}>`,
 		to: email, //["airbusjayrobert@gmail.com", "luisquinterojr10@gmail.com"],
 		subject: `Su mensaje ha sido enviado con éxito`,
 		text: "Pronto nos pondremos en contacto contigo",

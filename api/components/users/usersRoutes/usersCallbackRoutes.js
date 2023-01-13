@@ -1,4 +1,3 @@
-const usersControllers = require("../../users");
 const response = require("../../../routes/response");
 const { v4: uuidV4 } = require("uuid");
 const sendEmail = require("../../../services/emails");
@@ -205,7 +204,7 @@ const userRoutes = {
 
 			const { fullname, email, subject, message } = req.body;
 			const messageEmail = {
-				fullname: helpers.capitalize(fullname),
+				fullname: helpers.eachWordLetterUpper(fullname),
 				email: email.toLowerCase(),
 				subject: capi(subject.toLowerCase()),
 				message: capi(message.toLowerCase()),
