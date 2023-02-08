@@ -21,7 +21,6 @@ function multipleColumnSet(object) {
 
 const model = {
 	findAll: async TABLE => {
-		console.log("hola db")
 		connectionDB = await getConnection();
 		let [result] = await connectionDB.query(`SELECT * FROM ${TABLE}`);
 

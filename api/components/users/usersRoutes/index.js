@@ -1,6 +1,7 @@
 const routerx = require("express-promise-router");
 const middlewares = require("../usersMiddlewares");
 const usersCallbackRoutes = require("./usersCallbackRoutes");
+const cors = require("cors");
 
 const router = routerx();
 
@@ -41,9 +42,6 @@ router
 		middlewares.checkIfThereIsActivationCode,
 		usersCallbackRoutes.newCode,
 	)
-	.post(
-		"/message",
-		usersCallbackRoutes.sendMessageContact,
-	);
+	.post("/message", usersCallbackRoutes.sendMessageContact);
 
 module.exports = router;

@@ -70,10 +70,11 @@ const helpers = {
 	},
 
 	eachWordLetterUpper: str => {
-		str = str.split(" ").map(str => {
-			return str.charAt(0).toUpperCase() + str.slice(1);
+		let h = str.split(" ");
+		h = h.map(h => {
+			return h.charAt(0).toUpperCase() + h.slice(1);
 		});
-		return str.join().replaceAll(",", " ");
+		return h.join().replaceAll(",", " ");
 	},
 
 	getPathFile: nameFile => {

@@ -204,10 +204,10 @@ const userRoutes = {
 
 			const { fullname, email, subject, message } = req.body;
 			const messageEmail = {
-				fullname: helpers.eachWordLetterUpper(fullname),
+				fullname: fullname,
 				email: email.toLowerCase(),
-				subject: capi(subject.toLowerCase()),
-				message: capi(message.toLowerCase()),
+				subject: subject.toLowerCase(),
+				message: message.toLowerCase(),
 			};
 			const mailOptions = emailTemplates.contactMessage(messageEmail);
 			await sendEmail(mailOptions);
